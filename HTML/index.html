@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="format-detection" content="telephone=no">
@@ -18,14 +16,15 @@
         <link href="css/styles.css" rel="stylesheet">
         <title>Travel Guide</title>
     </head>
-  <body>
+    <body>
 
-  <div class="container-fluid topBar">
+        <div class="container-fluid topBar">
             <a class="appNav col-xs-2"><span class="fa fa-navicon"></span></a>
-            <a class="topTitle col-xs-10">Travel Guide</a>
+            <a class="topTitle col-xs-8">Travel Guide</a>
+            <a class="moreOpt col-xs-2"><span class="fa fa-search"></span></a>
         </div>
 
-<div class="sideBarWrap container-fluid col-xs-12">
+        <div class="sideBarWrap container-fluid col-xs-12">
             <!--Card-->
             <div class="card sideBar">
                 <!--Card content-->
@@ -59,60 +58,59 @@
                 <!--/.Card content-->
             </div>
             <!--/.Card-->
-</div>
-
-    <div class="app container-fluid">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-3"> 
-            <div class="card accomodationCard">
-                <div class="card-body">
-                    <h3 class="card-title"><span class="fa fa-bed"></span> Accomodation</h3>
-                    <div class="card-text">
-                        <img src="img/ac.png" width="100%" style="margin-right: -15px;">
-                        <a href="#">Show me more</a>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3"> 
-            <div class="card WeatherCard">
-                <div class="card-body">
-                    <h3 class="card-title"><span class="fa fa-sun-o"></span> Weather</h3>
-                    <div class="card-text">
-                        <img src="img/wt.png" width="100%">
-                        <a href="#">Detailed Weather Information</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3"> 
-            <div class="card accomodationCard">
-                <div class="card-body">
-                    <h3 class="card-title"><span class="fa fa-cutlery"></span> Places to Eat</h3>
-                    <div class="card-text">
-                        <img src="img/eat.jpg" width="100%">
-                        <a href="#">Show me more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3"> 
-            <div class="card landmarksCard">
-                <div class="card-body">
-                    <h3 class="card-title"><span class="fa fa-camera"></span> Landmarks</h3>
-                    <div class="card-text">
-                        <img src="img/land.jpg" width="100%">
-                        <a href="#">Show me more</a>
-                    </div>
-                </div>
-            </div>
-        </div> 
 
-      </div>
-      
-    </div>
-
+        <div class="app container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3"> 
+                    <div class="card contentCard accomodationCard">
+                        <div class="card-body">
+                            <h3 class="card-title"><span class="fa fa-bed"></span> Accomodation</h3>
+                            <div class="card-text">
+                                <img class="loadImg" src="img/load.gif" width='100%'>
+                                <p class="showMore">Fetchimg data from remote servers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3"> 
+                    <div class="card contentCard WeatherCard">
+                        <div class="card-body">
+                            <h3 class="card-title"><span class="fa fa-sun-o"></span> Weather</h3>
+                            <div class="card-text">
+                                <img class="loadImg" src="img/load.gif" width='100%'>
+                                <p class="showMore">Fetchimg data from remote servers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3"> 
+                    <div class="card contentCard foodCard">
+                        <div class="card-body">
+                            <h3 class="card-title"><span class="fa fa-cutlery"></span> Places to Eat</h3>
+                            <div class="card-text">
+                                <img class="loadImg" src="img/load.gif" width='100%'>
+                                <p class="showMore">Fetchimg data from remote servers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3"> 
+                    <div class="card contentCard landmarksCard">
+                        <div class="card-body">
+                            <h3 class="card-title"><span class="fa fa-camera"></span> Landmarks</h3>
+                            <div class="card-text">
+                                <img class="loadImg" src="img/load.gif" width='100%'>
+                                <p class="showMore">Fetchimg data from remote servers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div id="map"></div>
+        </div>
         
+        <script type="text/javascript" src="http://www.geoplugin.net/javascript.gp"></script>
         <!-- JQuery -->
         <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
         <!-- Bootstrap tooltips -->
@@ -121,7 +119,11 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="js/mdb.min.js"></script>
-        
+        <!-- navbar functionality -->
         <script type="text/javascript" src="js/navbar.js"></script>
-  </body>
+        <!-- google maps api and places api -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwWKtcO6Bv9z9ecf1c7fnCFIJLL2BIXx0&libraries=places"></script>
+        <!-- user location dependant data -->
+        <script type="text/javascript" src="js/location.js"></script>
+    </body>
 </html>

@@ -26,6 +26,10 @@ $(".sideBarWrap").click(function () {
     return false;
 });
 
+$(".moreOpt").click(function () {
+    window.location = "./search.html";
+})
+
 //sideBar items:
 $(".sideHomeBtn").click(function() {
     window.location = "./index.html";

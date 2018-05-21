@@ -1,3 +1,7 @@
+*{
+    margin-top: 0px;
+    padding-top: 0px;
+}
 .topBar{
     position: fixed;
     height: 50px;
@@ -20,8 +24,6 @@ body{
     background-image: url("http://xizabeach.com/s__www/wp-content/themes/281/images/home.jpg"); 
     
 }
-
-
 /*************************************************************************/
 .sideBarWrap{
     width:100%;
@@ -115,9 +117,16 @@ body{
 .hideSideBar{
     width: 0%;
 }
+/*//////////////////////////////////////////////////////////////////*/
+.sideFavBtn:hover{
+    color: red;
+}
+.sideFeatBtn:hover{
+    color: blue;
+}
 /*///////////////////////////////////////////////////////////////////*/
 .app{
-    padding-top: 50px;
+    padding-top: 60px;
 
 }
 .searchTitle{
@@ -145,6 +154,14 @@ body{
 
 }
 /*********************************************************************/
-.card{
+.contentCard{
     margin-top: 10px;
+}
+/***********************************************************************/
+.loadImg{
+    width: 100%;
+}
+.showMore{
+    width: 100%;
+    text-align: center;
 }
