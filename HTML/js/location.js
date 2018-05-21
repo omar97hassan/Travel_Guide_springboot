@@ -21,21 +21,20 @@ function populateCards(city) {
 
 		var foodRequest = {
 	    	location: mapCenter,
-	    	radius: '500',
+	    	radius: '20000',
 	    	type: ['restaurant']
 		};
 
 		var accomodationRequest = {
 	    	location: mapCenter,
-	    	radius: '500',
+	    	radius: '20000',
 	    	name: 'Hotel'
 		};
 
 		var poisRequest = {
 	    	location: mapCenter,
-	    	radius: '500',
-	    	//type: ['museum']
-	    	name: 'Museum'
+	    	radius: '20000',
+	    	query: 'top sights in' + $(".topTitle").html()
 		};
 
 		service = new google.maps.places.PlacesService(map);
@@ -47,45 +46,30 @@ function populateCards(city) {
 	function food(results, status) {
 	  	if (status == google.maps.places.PlacesServiceStatus.OK) {
 	  		console.log(results);
-	  		$(".foodCard .card-text").html("");
-	  		for (var i = 0; i < results.length; i++) {
-	  			if (results[i].photos) {
-		  			$(".foodCard .card-text").append("<img src='" + results[i].photos[0].getUrl({'maxWidth': 400, 'maxHeight': 300}) + "' width='100%'>");  				
-	  			} else{
-	  				$(".foodCard .card-text").append("<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdxuJkO8J3Bzk_Gsaw-vRaE3UlPdFmVGmP_ih0kX5zpql5iHVugw'  width='100%'>");
-	  			}
-	  			$(".foodCard .card-text").append("<p>"+results[i].name+"</p>");
-	  		}
+	  		var rand = Math.floor(Math.random() * Math.floor(3));
+	  	    var image = (results[rand].photos[0].getUrl({'maxWidth': 400, 'maxHeight': 300}));
+	  	    $(".foodCard .loadImg").attr("src", image);
+	  	    $(".foodCard .showMore").html("Found " + results.length + "+ resuts <br> <span class='clickForMore'> Click the card for more details...</span>");
 		}
 	}
 
 	function hotels(results, status) {
 	  	if (status == google.maps.places.PlacesServiceStatus.OK) {
 	  		console.log(results);
-	  		$(".accomodationCard .card-text").html("");
-	  		for (var i = 0; i < results.length; i++) {
-	  			if (results[i].photos) {
-		  			$(".accomodationCard .card-text").append("<img src='" + results[i].photos[0].getUrl({'maxWidth': 400, 'maxHeight': 300}) + "' width='100%'>");  				
-	  			} else{
-	  				$(".accomodationCard .card-text").append("<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdxuJkO8J3Bzk_Gsaw-vRaE3UlPdFmVGmP_ih0kX5zpql5iHVugw'  width='100%'>");
-	  			}
-	  			$(".accomodationCard .card-text").append("<p>"+results[i].name+"</p>");
-	  		}
+	  		var rand = Math.floor(Math.random() * Math.floor(3));
+	  	    var image = (results[rand].photos[0].getUrl({'maxWidth': 400, 'maxHeight': 300}));
+	  	    $(".accomodationCard .loadImg").attr("src", image);
+	  	    $(".accomodationCard .showMore").html("Found " + results.length + "+ resuts <br> <span class='clickForMore'> Click the card for more details...</span>");	
 		}
 	}
 
 	function pois(results, status) {
 	  	if (status == google.maps.places.PlacesServiceStatus.OK) {
 	  		console.log(results);
-	  		$(".landmarksCard .card-text").html("");
-	  		for (var i = 0; i < results.length; i++) {
-	  			if (results[i].photos) {
-		  			$(".landmarksCard .card-text").append("<img src='" + results[i].photos[0].getUrl({'maxWidth': 400, 'maxHeight': 300}) + "' width='100%'>");  				
-	  			} else{
-	  				$(".landmarksCard .card-text").append("<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdxuJkO8J3Bzk_Gsaw-vRaE3UlPdFmVGmP_ih0kX5zpql5iHVugw'  width='100%'>");
-	  			}
-	  			$(".landmarksCard .card-text").append("<p>"+results[i].name+"</p>");
-	  		}
+	  		var rand = Math.floor(Math.random() * Math.floor(3));
+	  	    var image = (results[rand].photos[0].getUrl({'maxWidth': 400, 'maxHeight': 300}));
+	  	    $(".landmarksCard .loadImg").attr("src", image);
+	  	    $(".landmarksCard .showMore").html("Found " + results.length + "+ resuts <br> <span class='clickForMore'> Click the card for more details...</span>");
 		}
 	}
 
@@ -108,15 +92,23 @@ if(str.indexOf('city=')!=-1){
 	var city = decodeURI(str.substring(str.indexOf("city=")+5));
 	$(".topTitle").html(city);
 	populateCards($(".topTitle").html());
+	getWeatherForIndex($(".topTitle").html());
 } else{
 	$(".topTitle").html(geoplugin_city());
 	populateCards();
+	getWeatherForIndex(geoplugin_city());
 }
-/*
-if($(".topTitle").html() == "Travel Guide"){
-	$(".topTitle").html(geoplugin_city());
-	populateCards();
-} else{
-	populateCards($(".topTitle").html());
-}
-*/
+
+$(".accomodationCard").on("click", function(){
+	window.location = "accomodation.html?city=" + $(".topTitle").html();
+})
+$(".landmarksCard").on("click", function(){
+	window.location = "landMarks.html?city=" + $(".topTitle").html();
+})
+$(".foodCard").on("click", function(){
+	window.location = "placeToEat.html?city=" + $(".topTitle").html();
+})
+$(".WeatherCard").on("click", function(){
+	window.location = "weather.html?city=" + $(".topTitle").html();
+})
+

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta charset="utf-8">
@@ -22,6 +23,25 @@
             <a class="appNav col-xs-2"><span class="fa fa-navicon"></span></a>
             <a class="topTitle col-xs-8">Travel Guide</a>
             <a class="moreOpt col-xs-2"><span class="fa fa-search"></span></a>
+        </div>
+
+        <div class="recentModalWrap container-fluid">
+            <!--Card-->
+            <div class="card recentModal">
+                <!--Card content-->
+                <!--Title-->
+                <h3 class="card-title">
+                    Recent trips<span class="pull-right closeRecentModal">×</span>
+                </h3>
+                <div class="card-body">
+                    <!--Text-->
+                    <div class="card-text listOfRecent container-fluid">
+
+                    </div>
+                </div>
+                <!--/.Card content-->
+            </div>
+            <!--/.Card-->
         </div>
 
         <div class="sideBarWrap container-fluid col-xs-12">
@@ -48,6 +68,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="sideItem sideHistoryBtn"><span class="fa fa-history fa-fw"></span> Recent</div>
                         <div class="sideItem sideHomeBtn"><span class="fa fa-home fa-fw"></span> Home</div>
                         <div class="sideItem sideSearchBtn"><span class="fa fa-search fa-fw"></span> Search</div>
                         <div><hr></div>
@@ -68,7 +89,7 @@
                             <h3 class="card-title"><span class="fa fa-bed"></span> Accomodation</h3>
                             <div class="card-text">
                                 <img class="loadImg" src="img/load.gif" width='100%'>
-                                <p class="showMore">Fetchimg data from remote servers</p>
+                                <p class="showMore col-12">Fetchimg data from remote servers</p>
                             </div>
                         </div>
                     </div>
@@ -79,7 +100,7 @@
                             <h3 class="card-title"><span class="fa fa-sun-o"></span> Weather</h3>
                             <div class="card-text">
                                 <img class="loadImg" src="img/load.gif" width='100%'>
-                                <p class="showMore">Fetchimg data from remote servers</p>
+                                <p class="showMore col-12">Fetchimg data from remote servers</p>
                             </div>
                         </div>
                     </div>
@@ -90,7 +111,7 @@
                             <h3 class="card-title"><span class="fa fa-cutlery"></span> Places to Eat</h3>
                             <div class="card-text">
                                 <img class="loadImg" src="img/load.gif" width='100%'>
-                                <p class="showMore">Fetchimg data from remote servers</p>
+                                <p class="showMore col-12">Fetchimg data from remote servers</p>
                             </div>
                         </div>
                     </div>
@@ -101,7 +122,7 @@
                             <h3 class="card-title"><span class="fa fa-camera"></span> Landmarks</h3>
                             <div class="card-text">
                                 <img class="loadImg" src="img/load.gif" width='100%'>
-                                <p class="showMore">Fetchimg data from remote servers</p>
+                                <p class="showMore col-12">Fetchimg data from remote servers</p>
                             </div>
                         </div>
                     </div>
@@ -124,6 +145,7 @@
         <!-- google maps api and places api -->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwWKtcO6Bv9z9ecf1c7fnCFIJLL2BIXx0&libraries=places"></script>
         <!-- user location dependant data -->
+        <script type="text/javascript" src="js/weather.js"></script>
         <script type="text/javascript" src="js/location.js"></script>
     </body>
 </html>

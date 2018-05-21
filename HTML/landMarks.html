@@ -1,0 +1,135 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+        integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+        crossorigin="anonymous" />
+        <link
+        href="css/bootstrap.css"
+        rel="stylesheet" />
+        <link href="css/mdb.css"
+        rel="stylesheet" />
+        <link href="css/cards.css"
+        rel="stylesheet" />
+        <title>Travel Guide</title>
+    </head>
+    <body>
+        <div class="container-fluid topBar">
+            <a class="appNav col-xs-2"><span class="fa fa-bars"></span></a> 
+            <a class="topTitle col-xs-8">Travel Guide</a>
+            <a class="moreOpt col-xs-2" href="#map"><span class="fa fa-map"></span></a>
+        </div>
+        <div class="recentModalWrap container-fluid">
+            <!--Card-->
+            <div class="card recentModal">
+                <!--Card content-->
+                <!--Title-->
+                <h3 class="card-title">
+                    Recent trips<span class="pull-right closeRecentModal">×</span>
+                </h3>
+                <div class="card-body">
+                    <!--Text-->
+                    <div class="card-text listOfRecent container-fluid">
+
+                    </div>
+                </div>
+                <!--/.Card content-->
+            </div>
+            <!--/.Card-->
+        </div>
+        <div class="sideBarWrap container-fluid col-xs-12">
+            <!--Card-->
+            <div class="card sideBar">
+                <!--Card content-->
+                <!--Title-->
+                <div class="card-title SideBarTitle">
+                    <a class="closeSideBar"><span class="fa fa-arrow-left"></span></a>
+                </div>
+                <div class="card-body">
+                    <!--Text-->
+                    <div class="card-text">
+                        <div class="sideTitle">Travel Guide</div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="sideBtn sideFeatBtn">
+                                    <span class="fa fa-history fa-fw sideIcon"></span><br></br> <a>Recent</a>
+                                </div>
+                                <div class="sideBtn sideFavBtn">
+                                    <span class="fa fa-heart fa-fw sideIcon"></span><br></br> <a>Favorite</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sideItem sideHistoryBtn"><span class="fa fa-history fa-fw"></span> Recent</div>
+                        <div class="sideItem sideHomeBtn">
+                            <span class="fa fa-home fa-fw"></span> Home
+                        </div>
+                        <div class="sideItem sideSearchBtn">
+                            <span class="fa fa-search fa-fw"></span> Search
+                        </div>
+                        <div></div>
+                        <div class="sideItem sideAboutBtn">
+                            <span class="fa fa-info fa-fw fa-spin"></span> About the project
+                        </div>
+                        <div class="sideItem sideOptionsBtn">
+                            <span class="fa fa-cog fa-fw"></span> Settings
+                        </div>
+                    </div>
+                </div>
+                <!--/.Card content-->
+            </div>
+            <!--/.Card-->
+        </div>
+
+        <div class="places container-fluid">
+            <h1 class="listOfPlaces">Landmarks</h1>
+
+            <p class="subtitle">Interesting places to visit</p>
+
+            <div class="container">
+                <div class="row landMarksCards grid">
+                    
+                </div>
+            </div>
+        </div>
+</div>
+
+<div id="map" width="100%"></div>
+
+<script type="text/javascript" src="http://www.geoplugin.net/javascript.gp"></script>
+<!-- JQuery -->
+<script type="text/javascript"
+src="js/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript"
+src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+src="js/bootstrap.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript"
+src="js/mdb.js"></script>
+<script type="text/javascript"
+src="js/navbar.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwWKtcO6Bv9z9ecf1c7fnCFIJLL2BIXx0&libraries=places"></script>
+<script type="text/javascript"
+src="js/landMarks.js"></script>
+<script src="js/masonry.pkgd.js"></script>
+<script type="text/javascript">
+    function slozi(){
+        var w = $(".landMarksCards").width()/3;
+        w = Math.trunc(w*0.92);
+        $('.grid').masonry({
+          // options
+          itemSelector: '.grid-item',
+          columnWidth: w
+        });
+    };
+
+    window.onscroll = function() {slozi()};
+</script>
+
+</body>
+</html>

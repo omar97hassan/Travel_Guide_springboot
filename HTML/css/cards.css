@@ -17,13 +17,13 @@
 }
 .moreOpt{
     float:right;
+    color: white;
 }
 /*************************************************************************/
 body{
-    background-image: url("http://xizabeach.com/s__www/wp-content/themes/281/images/home.jpg"); 
+   background-image: url("http://xizabeach.com/s__www/wp-content/themes/281/images/home.jpg");
     
 }
-/******************************************************************************/
 /*///////////////////////////////////////////////////////////////////*/
 .recentModalWrap{
     position: fixed;
@@ -61,7 +61,17 @@ body{
     opacity: 1;
     height: auto;
 }
+.closeRecentModal{
+    float: right;
+}
+.recentCity{
+    color:#757474;
+}
+.recentCity:hover{
+    background: #e0e0e0;
+}
 /*///////////////////////////////////////////////////////////////////*/
+
 /*************************************************************************/
 .sideBarWrap{
     width:100%;
@@ -156,50 +166,147 @@ body{
     width: 0%;
 }
 /*///////////////////////////////////////////////////////////////////*/
-.searchTitle{
-    margin-top: 30vh; 
-    text-align: center;
-    width:100%;
-}
-.searchBox{
-    width: 80%;
-    margin-top:2%;
-    margin-left: 10%;
-    background-color: white;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,0.3);
-    text-align: center;
-    padding: 20px;
-    border: none;
-    font-size: x-large;
-}
-.searchButton{
-    width: 40%;
-    text-align: center;
-    margin: 5% 0px 0px 30%;
-    font-size: large;
-    background-color: #009999 !important;
+.accomodation{
+    padding-top: 50px;
 
 }
-.recentCity:hover{
-    background: #e0e0e0;
+.listOfAccmodation{
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 30px;
+    padding-bottom: 0px;  
 }
-.recentCity{
-    color:#757474;
+.subtitle{
+    text-align: center;
+    color: darkgrey;
+    width: 100%;
+}
+.accomodationAddress{
+    font-size: medium;
+}
+.priceRange{
+    float: right;
+}
+.fa-star{
+    
+}
+
+.grid-item{
+    padding-bottom: 10px;
+}
+@media(min-width: 768px){
+    .grid-item { width: 30%; }
+}
+.accomodation {
+    cursor: pointer;
 }
 /*///////////////////////////////////////////////////////////////////*/
-.app{
-    padding-top: 70px;
+.places{
+    padding-top: 50px;
+
 }
-.showMore{
-    font-size: x-large;
+.listOfPlaces{
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 30px;
+    padding-bottom: 0px;  
+}
+.subtitle{
+    text-align: center;
+    color: darkgrey;
+    width: 100%;
+}
+.placeAddress{
+    font-size: medium;
+}
+.priceRange{
+    float: right;
+}
+.fa-star{
+    
+}
+
+.grid-item{
+    padding-bottom: 10px;
+}
+@media(min-width: 768px){
+    .grid-item { width: 30%; }
+}
+.placeCard {
+    cursor: pointer;
+}
+/*********************************************************************/
+.weather{
+    padding-top: 55px;    
+}
+.owm{
+    color: white;
+    font-size: medium;
+    float: right;
+    background-color: rgba(0,0,0,0.1);
+}
+.owmbr{
+    display: none;
+}
+@media(max-width: 768px){
+    .owm{
+        float: none;
+        font-size: small;
+    }
+    .owmbr{
+        display: block;
+    }
+}
+.hours{
+    padding-top: 15px;
+}
+.followingDays{
+    padding-top: 25px;
+}
+.imageWrap{
     text-align: center;
 }
-.clickForMore{
-    font-size: medium;
-    color: darkgrey;
+.image{
+    width: 75%;
 }
-.contentCard{
-    margin-top: 20px;
+.tempInfo{
+    text-align: center;
+}
+.celsius{
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bold;
+}
+.fahrenheit{
+    font-size: x-large;
+    color: darkgray;
+    text-align: center;
+}
+.weatherDesc{
+    text-align: center;
+    font-size: x-large;
+}
+.moreInfo{
+    font-size: large;
+}
+.nextHour{
+    margin-top: 5px;
+}
+.hourImage{
+}
+.degree{
+    font-size: xx-large;
+    text-align: center;
+}
+.hour, .nextDesc{
+    text-align: center;
+}
+.nextDay{
+    margin-top: 5px;
+    text-align: center;
+}
+.nextDayDate{
+    color: darkgray;
 }
 .accomodationCard .loadImg, .accomodationCard .showMore, 
 .landmarksCard .loadImg, .landmarksCard .showMore,
@@ -209,4 +316,3 @@ body{
 {
     cursor: pointer;
 }
-

@@ -129,3 +129,39 @@
 		height: 480px;
 	}
 }
+.recentModalWrap{
+    position: fixed;
+    padding-top: 10em;
+    height:100%;
+    width:100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+
+    visibility: hidden;
+    opacity: 0;
+    transition:visibility 0s, opacity 0.5s linear;
+}
+.recentModal{
+    height:0px;
+    opacity: 0;
+    transition: opacity 0.1s, height 1s linear;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 0px;
+}
+.recentModal > .card-title{
+    padding: 10px 15px;
+    background-color: #009999;
+    color: white;
+}
+.opisWrap{
+    padding-top:20px;
+}
+.showDarknesR{
+    visibility: visible;
+    opacity: 1;
+}
+.showRecentModal{
+    opacity: 1;
+    height: auto;
+}
