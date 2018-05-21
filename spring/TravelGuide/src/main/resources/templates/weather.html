@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+          integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+          crossorigin="anonymous" />
+    <link
+            href="http://travel.quattrofantastico.ba/css/bootstrap.css" rel="stylesheet" />
+    <link href="http://travel.quattrofantastico.ba/css/mdb.css" rel="stylesheet" />
+    <link href="http://travel.quattrofantastico.ba/css/cards.css" rel="stylesheet" />
+    <title>Travel Guide</title>
+</head>
+<body>
+<div class="container-fluid topBar">
+    <a class="appNav"><span class="fa fa-bars"></span></a>
+    <a class="topTitle col-8">Travel Guide</a>
+</div>
+
+<div class="recentModalWrap container-fluid">
+    <!--Card-->
+    <div class="card recentModal">
+        <!--Card content-->
+        <!--Title-->
+        <h3 class="card-title">
+            Recent trips<span class="pull-right closeRecentModal">×</span>
+        </h3>
+        <div class="card-body">
+            <!--Text-->
+            <div class="card-text listOfRecent container-fluid">
+
+            </div>
+        </div>
+        <!--/.Card content-->
+    </div>
+    <!--/.Card-->
+</div>
+<div class="sideBarWrap container-fluid col-12">
+    <!--Card-->
+    <div class="card sideBar">
+        <!--Card content-->
+        <!--Title-->
+        <div class="card-title SideBarTitle">
+            <a class="closeSideBar"><span class="fa fa-arrow-left"></span></a>
+        </div>
+        <div class="card-body">
+            <!--Text-->
+            <div class="card-text">
+                <div class="sideTitle">Travel Guide</div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="sideBtn sideFeatBtn">
+                            <span class="fa fa-history fa-fw sideIcon"></span><br></br> <a>Recent</a>
+                        </div>
+                        <div class="sideBtn sideFavBtn">
+                            <span class="fa fa-heart fa-fw sideIcon"></span><br></br> <a>Favorite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sideItem sideHistoryBtn"><span class="fa fa-history fa-fw"></span> Recent</div>
+                <div class="sideItem sideHomeBtn">
+                    <span class="fa fa-home fa-fw"></span> Home
+                </div>
+                <div class="sideItem sideSearchBtn">
+                    <span class="fa fa-search fa-fw"></span> Search
+                </div>
+                <div></div>
+                <div class="sideItem sideAboutBtn">
+                    <span class="fa fa-info fa-fw fa-spin"></span> About the project
+                </div>
+                <div class="sideItem sideOptionsBtn">
+                    <span class="fa fa-cog fa-fw"></span> Settings
+                </div>
+            </div>
+        </div>
+        <!--/.Card content-->
+    </div>
+    <!--/.Card-->
+</div>
+
+<div class="weather container">
+    <div class= "weatherForToday col-12">
+        <div class="card-title">
+            <h2> Weather for today <br class="owmbr" /><span class="owm">data provided by OpenWeatherMap</span></h2>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-sm-4 imageWrap">
+                        <img class="image" src="https://techcrunch.com/wp-content/uploads/2017/05/onedrive-illo3.jpg?w=730&amp;crop=1" height="100%;"/>
+                    </div>
+                    <div class="col-12 col-sm-4 row">
+                        <p class="tempInfo col-12">
+                            <span class="celsius "> 15C </span>
+                            <span class="fahrenheit "> 32FC </span>
+                        </p>
+                        <p class="weatherDesc col-12"></p>
+                    </div>
+                    <div class="col-12 col-sm-4 moreInfo">
+                        <p class="humidity"> vlažnost </p>
+                        <p class="wind"> vjetar </p>
+                        <p class="visibility"> padavine </p>
+                        <p class="iSunca"> padavine </p>
+                        <p class="aksam"> padavine </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row hours">
+            <h4 class="col-12">Next few hours:</h4>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card nextHour">
+                    <div class="card-body row">
+                        <img class="hourImage col-12 col-lg-6" src="#" style="height: 100%;"/>
+                        <div class="col-12 col-lg-6">
+                            <p class="degree"> 32C </p>
+                        </div>
+                        <p class="hour col-12"> 12:00 </p>
+                        <p class="nextDesc col-12"> 12:00 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card nextHour">
+                    <div class="card-body row">
+                        <img class="hourImage col-12 col-lg-6" src="#" style="height: 100%;"/>
+                        <div class="col-12 col-lg-6">
+                            <p class="degree"> 32C </p>
+                        </div>
+                        <p class="hour col-12"> 12:00 </p>
+                        <p class="nextDesc col-12"> 12:00 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card nextHour">
+                    <div class="card-body row">
+                        <img class="hourImage col-12 col-lg-6" src="#" style="height: 100%;"/>
+                        <div class="col-12 col-lg-6">
+                            <p class="degree"> 32C </p>
+                        </div>
+                        <p class="hour col-12"> 12:00 </p>
+                        <p class="nextDesc col-12"> 12:00 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="card nextHour">
+                    <div class="card-body row">
+                        <img class="hourImage col-12 col-lg-6" src="#" style="height: 100%;"/>
+                        <div class="col-12 col-lg-6">
+                            <p class="degree"> 32C </p>
+                        </div>
+                        <p class="hour col-12"> 12:00 </p>
+                        <p class="nextDesc col-12"> 12:00 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="map" width="100%"></div>
+
+<script type="text/javascript" src="http://www.geoplugin.net/javascript.gp"></script>
+<!-- JQuery -->
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/js/jquery-3.2.1.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/js/popper.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/jsjs/bootstrap.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/js/mdb.js"></script>
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/js/navbar.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwWKtcO6Bv9z9ecf1c7fnCFIJLL2BIXx0&amp;libraries=places"></script>
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/js/weather.js"></script>
+
+</body>
+</html>

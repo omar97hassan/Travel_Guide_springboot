@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"/>
+    <!-- Bootstrap core CSS -->
+    <link href="http://travel.quattrofantastico.ba/css/bootstrap.css" rel="stylesheet"/>
+    <!-- Material Design Bootstrap -->
+    <link href="http://travel.quattrofantastico.ba/css/mdb.css" rel="stylesheet"/>
+    <!-- Your custom styles (optional) -->
+    <link href="http://travel.quattrofantastico.ba/css/styles.css" rel="stylesheet"/>
+    <title>Travel Guide</title>
+</head>
+<body>
+<div class="container-fluid topBar">
+    <a class="appNav col-xs-2"><span class="fa fa-navicon"></span></a>
+    <a class="topTitle col-xs-8">Travel Guide</a>
+    <a class="moreOpt col-xs-2"><span class="fa fa-search"></span></a>
+</div>
+
+<div class="recentModalWrap container-fluid">
+    <!--Card-->
+    <div class="card recentModal">
+        <!--Card content-->
+        <!--Title-->
+        <h3 class="card-title">
+            Recent trips<span class="pull-right closeRecentModal">×</span>
+        </h3>
+        <div class="card-body">
+            <!--Text-->
+            <div class="card-text listOfRecent container-fluid">
+
+            </div>
+        </div>
+        <!--/.Card content-->
+    </div>
+    <!--/.Card-->
+</div>
+
+<div class="sideBarWrap container-fluid col-xs-12">
+    <!--Card-->
+    <div class="card sideBar">
+        <!--Card content-->
+        <!--Title-->
+        <div class="card-title SideBarTitle">
+            <a class="closeSideBar"><span class="fa fa-arrow-left"></span></a>
+        </div>
+        <div class="card-body">
+            <!--Text-->
+            <div class="card-text">
+                <div class="sideTitle">Travel Guide</div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="sideBtn sideFeatBtn">
+                            <span class="fa fa-history fa-fw sideIcon"></span><br/>
+                            <a>Recent</a>
+                        </div>
+                        <div class="sideBtn sideFavBtn">
+                            <span class="fa fa-heart fa-fw sideIcon"></span><br/>
+                            <a>Favourite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sideItem sideHistoryBtn"><span class="fa fa-history fa-fw"></span> Recent</div>
+                <div class="sideItem sideHomeBtn"><span class="fa fa-home fa-fw"></span> Home</div>
+                <div class="sideItem sideSearchBtn"><span class="fa fa-search fa-fw"></span> Search</div>
+                <div><hr/></div>
+                <div class="sideItem sideAboutBtn"><span class="fa fa-info fa-fw fa-spin"></span> About the project</div>
+                <div class="sideItem sideOptionsBtn"><span class="fa fa-gear fa-fw"></span> Settings</div>
+            </div>
+        </div>
+        <!--/.Card content-->
+    </div>
+    <!--/.Card-->
+</div>
+
+<div class="app container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card contentCard accomodationCard">
+                <div class="card-body">
+                    <h3 class="card-title"><span class="fa fa-bed"></span> Accomodation</h3>
+                    <div class="card-text">
+                        <img class="loadImg" src="img/load.gif" width='100%'/>
+                        <p class="showMore">Fetchimg data from remote servers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card contentCard WeatherCard">
+                <div class="card-body">
+                    <h3 class="card-title"><span class="fa fa-sun-o"></span> Weather</h3>
+                    <div class="card-text">
+                        <img class="loadImg" src="img/load.gif" width='100%'/>
+                        <p class="showMore">Fetchimg data from remote servers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card contentCard foodCard">
+                <div class="card-body">
+                    <h3 class="card-title"><span class="fa fa-cutlery"></span> Places to Eat</h3>
+                    <div class="card-text">
+                        <img class="loadImg" src="img/load.gif" width='100%'/>
+                        <p class="showMore">Fetchimg data from remote servers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card contentCard landmarksCard">
+                <div class="card-body">
+                    <h3 class="card-title"><span class="fa fa-camera"></span> Landmarks</h3>
+                    <div class="card-text">
+                        <img class="loadImg" src="img/load.gif" width='100%'/>
+                        <p class="showMore">Fetchimg data from remote servers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+</div>
+
+<script type="text/javascript" src="http://www.geoplugin.net/javascript.gp"></script>
+<!-- JQuery -->
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/js/jquery-3.2.1.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/js/popper.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/js/bootstrap.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/js/mdb.js"></script>
+<!-- navbar functionality -->
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/js/navbar.js"></script>
+<!-- google maps api and places api -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwWKtcO6Bv9z9ecf1c7fnCFIJLL2BIXx0&amp;libraries=places"></script>
+<!-- user location dependant data -->
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/js/weather.js"></script>
+<script type="text/javascript" src="http://travel.quattrofantastico.ba/js/location.js"></script>
+</body>
+</html>
